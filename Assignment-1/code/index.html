@@ -11,10 +11,36 @@
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- <div>
+        <div></div>
+        <div></div>
+      </div>
+      <div></div>
+      <div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div> -->
+    </div>
+
     <script type="text/babel">
 //React Code here
- ReactDOM.render(<div></div>,document.getElementById('root'));
+var one=React.createElement('div',{class:"main", id:"container1"},
+React.createElement('div',{class:"Uinside", id :"inside1",style:{backgroundColor:"yellow"}},"",null),
+React.createElement('div',{class:"Uinside", id :"inside2",style:{backgroundColor:"yellow"}},"",null),null)
+
+var two=React.createElement('div',{class:"main", id:"container2",style:{backgroundColor:"red"}},"",null)
+
+var three=React.createElement('div',{class:"main", id:"container3"},
+React.createElement('div',{class:"Linside", id :"inside3",style:{backgroundColor:"blue"}},"",null),
+React.createElement('div',{class:"Linside", id :"inside4",style:{backgroundColor:"blue"}},"",null),
+React.createElement('div',{class:"Linside", id :"inside5",style:{backgroundColor:"blue"}},"",null),
+null)
+
+var big=React.createElement('div',{id:"bigcontainer",style:{backgroundColor:"white"}},one,two,three,null)
+
+ ReactDOM.render(big,document.getElementById('root'));
 
 </script>
 <!--
